@@ -1,0 +1,7 @@
+{
+  "name": "lille-jardin",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'parc/view/:id',
+    loadChildren: () => import('./parc/view/view.module').then( m => m.ViewPageModule)
+  },
 ];
 
 @NgModule({

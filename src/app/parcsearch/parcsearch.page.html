@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title mode="ios">Parcs recherché</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Selection</ion-label>
+    </ion-list-header>
+    <ion-item *ngFor="let parc of parcs" (click)="onClickViewPark(parc['parc_id'])" button>
+      <ion-label>
+        <h2>{{ parc['parc_nom'] }}</h2>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

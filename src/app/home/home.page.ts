@@ -15,8 +15,15 @@ export class HomePage implements OnInit {
     this.parcService.init();
   }
 
-  onClickViewPark(p_id: string) {
-    this.navCtrl.navigateForward('parc/view/' + p_id);
+  onClickAllParcs() {
+    this.navCtrl.navigateForward('all-parcs');
   }
 
+  onClickQuartier() {
+    this.navCtrl.navigateForward('quartier');
+  }
+
+  onClickType() {
+    this.navCtrl.navigateForward('type');
+  }
 }

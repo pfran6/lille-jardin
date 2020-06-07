@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title mode="ios">Type</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Liste des quartiers</ion-label>
+    </ion-list-header>
+    <ion-item *ngFor="let type of typeService.types" (click)="onClickType(type['parc_type'])" button>
+      <ion-label>
+        <h2>{{ type['parc_type'] }}</h2>
+      </ion-label>
+      <ion-note slot="end">{{ type['nb'] }}</ion-note>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

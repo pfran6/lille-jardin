@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title mode="ios">Quartier</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Liste des quartiers</ion-label>
+    </ion-list-header>
+    <ion-item *ngFor="let quartier of quartierService.quartiers" (click)="onClickQuartier(quartier['parc_quartier'])" button>
+      <ion-label>
+        <h2>{{ quartier['parc_quartier'] }}</h2>
+      </ion-label>
+      <ion-note slot="end">{{ quartier['nb'] }}</ion-note>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

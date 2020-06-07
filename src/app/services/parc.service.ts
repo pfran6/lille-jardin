@@ -15,6 +15,7 @@ export class ParcService {
     this.httpClient.get('http://127.0.0.1:3000/parcs').subscribe(
       (data: Parc[]) => {
         this.parcs = data;
+        console.log(data);
       },
       (error) => {
         console.log("Erreur: ParcService => " + error);
@@ -24,5 +25,9 @@ export class ParcService {
 
   get() {
     return this.httpClient.get('http://127.0.0.1:3000/parcs');
+  }
+
+  getSearch(param: string) {
+    return this.httpClient.get('http://127.0.0.1:3000/parcs/c/' + param);
   }
 }
